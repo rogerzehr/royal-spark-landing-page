@@ -9,7 +9,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <header class="header">
             <div class="header-container">
                 <div class="logo-container">
@@ -17,9 +16,10 @@
                     <span class="logo-text">Royal Spark</span>
                 </div>
                 <nav class="desktop-nav">
+                    <a href="#about" class="nav-link">About</a>
                     <a href="#features" class="nav-link">Features</a>
                     <a href="#podcasts" class="nav-link">Podcasts</a>
-                    <a href="#about" class="nav-link">About</a>
+                    <a href="top-innovations.html" class="nav-link">Top Innovations</a>
                     <a href="#contact" class="nav-link">Contact</a>
                 </nav>
                 <button class="mobile-menu-button">
@@ -34,7 +34,6 @@
         </header>
 
         <main>
-            <!-- Hero Section -->
             <section class="hero-section">
                 <div class="hero-background"></div>
                 <div class="hero-glow"></div>
@@ -49,30 +48,53 @@
                             of the 100 ARW & 352 SOW.
                         </p>
                         <div class="hero-buttons">
-                            <button class="primary-button">
-                                Explore Our Work
+                            <a href="https://usaf.dps.mil/sites/100ARW/CPI/SitePages/CPI.aspx" class="primary-button" target="_blank" rel="noopener noreferrer">
+                                Royal Spark SharePoint
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-right">
                                     <polyline points="9 18 15 12 9 6"></polyline>
                                 </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="hero-video">
-                        <div class="video-container">
-                            <img src="images/placeholder.jpg" alt="Royal Spark Innovation" class="video-placeholder">
-                            <div class="video-overlay"></div>
-                            <button class="play-button">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                                </svg>
-                                <span class="sr-only">Play video</span>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Features Section -->
+            <section id="about" class="about-section">
+                <div class="section-container">
+                    <div class="section-header">
+                        <h2 class="section-title">About Royal Spark</h2>
+                        <p class="section-description">Igniting Innovation. Empowering Warfighters.</p>
+                    </div>
+                    <div class="about-content">
+                        <p>Royal Spark is the dedicated innovation cell serving RAF Mildenhall, acting as the launchpad for next-generation ideas across the 100th Air Refueling Wing, 352nd Special Operations Wing, 95th Reconnaissance Squadron, 488th Intelligence Squadron, and 727th Air Mobility Squadron. We empower Airmen to solve real-world problems through rapid prototyping, emerging technologies, and creative collaboration.</p>
+
+                        <h3>Our Mission</h3>
+                        <p>To drive mission-focused innovation that strengthens readiness, enhances lethality, and supports our Airmen through cutting-edge solutions, cross-functional partnerships, and grassroots creativity.</p>
+
+                        <h3>Our Vision</h3>
+                        <p>To be the premier innovation hub in U.S. Air Forces in Europe – connecting minds, accelerating ideas, and delivering operational impact at the speed of relevance.</p>
+
+                        <h3>Our Origin Story</h3>
+                        <p>Born from the grassroots ideas of Airmen who saw better ways to accomplish the mission, Royal Spark was founded to break down bureaucratic barriers and fuel a culture of innovation. Since inception, we've evolved into a central hub for modernization efforts across Mildenhall’s diverse and dynamic units—proving that bold ideas can come from anywhere.</p>
+
+                        <h3>Meet Our Innovators</h3>
+                        <p>Our team is a blend of problem solvers, tinkerers, and forward-thinkers. From cyber warriors and logistics experts to 3D printing specialists and data-driven analysts, Royal Spark is powered by Airmen who refuse to settle for the status quo. We operate with a flat structure, empowering every rank to innovate and lead.</p>
+
+                        <h3>What We Do</h3>
+                        <ul>
+                            <li>Manage Squadron Innovation Funds (SIF)</li>
+                            <li>Develop rapid prototypes in our 3D printing lab</li>
+                            <li>Host design sprints, workshops, and pitch events</li>
+                            <li>Forge partnerships with industry, academia, and allied forces</li>
+                            <li>Support fielding of new tech, software, and workflows</li>
+                        </ul>
+
+                        <h3 class="about-cta-title">Let’s Build the Future – Together</h3>
+                        <p class="about-cta-text">Got an idea to improve the mission? Visit our lab, pitch your concept, or just stop by to collaborate. Innovation is a team sport—and everyone has a part to play.</p>
+                    </div>
+                </div>
+            </section>
+
             <section id="features" class="features-section">
                 <div class="section-container">
                     <div class="section-header">
@@ -129,7 +151,6 @@
                 </div>
             </section>
 
-            <!-- Podcast Section -->
             <section id="podcasts" class="podcast-section">
                 <div class="section-container">
                     <div class="section-header">
@@ -142,7 +163,7 @@
                     <div class="podcast-container">
                         <div class="podcast-card">
                             <div class="podcast-thumbnail-container">
-                                <img src="images/drone-thumbnail.jpg" alt="sUAS Drone" class="podcast-thumbnail">
+                                <img src="images/drone-thumbnail.jpg" alt="sUAS Drone" class="podcast-thumbnail" onerror="this.onerror=null;this.src='https://placehold.co/300x200/09090b/ffffff?text=Podcast+Art';">
                                 <button class="podcast-play-button" id="podcastPlayButton">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="podcast-play-icon">
                                         <polygon points="5 3 19 12 5 21 5 3"></polygon>
@@ -182,14 +203,13 @@
                 </div>
             </section>
 
-            <!-- CTA Section -->
             <section class="cta-section">
                 <div class="section-container">
                     <div class="cta-card">
-                        <div class="cta-background"></div>
+                        <div class="cta-background" style="background-image: url('images/placeholder.jpg');" onerror="this.style.backgroundImage='url(https://placehold.co/600x400/18181b/ffffff?text=CTA+Background)'"></div>
                         <div class="cta-content">
                             <div class="cta-logo-container">
-                                <img src="images/royal-spark-logo.png" alt="Royal Spark Logo" class="cta-logo">
+                                <img src="images/royal-spark-logo.png" alt="Royal Spark Logo" class="cta-logo" onerror="this.onerror=null;this.src='https://placehold.co/96x96/000000/ffffff?text=Logo';">
                             </div>
                             <h2 class="cta-title">Ready to Spark Innovation?</h2>
                             <p class="cta-description">
