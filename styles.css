@@ -2,6 +2,7 @@
 :root {
   --color-black: #000000;
   --color-white: #ffffff;
+  --color-zinc-200: #e4e4e7; /* Added for slightly off-white text if needed */
   --color-zinc-300: #d4d4d8;
   --color-zinc-400: #a1a1aa;
   --color-zinc-500: #71717a;
@@ -173,41 +174,23 @@ body {
 .hero-container {
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
+  display: grid; 
   gap: 3rem;
   position: relative;
   z-index: 1;
-}
-
-@media (min-width: 1024px) {
-  .hero-container {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
-  }
+  justify-items: center; 
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  text-align: center;
-}
-
-@media (min-width: 1024px) {
-  .hero-content {
-    text-align: left;
-  }
+  text-align: center; 
+  align-items: center; 
 }
 
 .hero-logo-container {
-  margin: 0 auto 1rem;
-}
-
-@media (min-width: 1024px) {
-  .hero-logo-container {
-    margin: 0 0 1rem;
-  }
+  margin: 0 auto 1rem; 
 }
 
 .hero-logo {
@@ -248,7 +231,7 @@ body {
   font-size: 1.125rem;
   color: var(--color-zinc-400);
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto; 
 }
 
 @media (min-width: 768px) {
@@ -257,28 +240,16 @@ body {
   }
 }
 
-@media (min-width: 1024px) {
-  .hero-description {
-    margin: 0;
-  }
-}
-
 .hero-buttons {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  justify-content: center;
+  justify-content: center; 
 }
 
 @media (min-width: 640px) {
   .hero-buttons {
     flex-direction: row;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero-buttons {
-    justify-content: flex-start;
   }
 }
 
@@ -306,59 +277,6 @@ body {
   width: 1rem;
   height: 1rem;
   margin-left: 0.5rem;
-}
-
-.hero-video {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-radius: 0.75rem;
-  border: 1px solid var(--color-zinc-800);
-  background-color: var(--color-zinc-950);
-}
-
-.video-container {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.video-placeholder {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.video-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top right, rgba(0, 0, 0, 0.6), transparent);
-}
-
-.play-button {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  background-color: var(--color-purple-600);
-  color: var(--color-white);
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.play-button:hover {
-  background-color: var(--color-purple-700);
-}
-
-.play-button svg {
-  width: 2rem;
-  height: 2rem;
 }
 
 /* Features Section */
@@ -602,6 +520,70 @@ body {
   width: 100%;
 }
 
+/* About Section */
+.about-section {
+  padding: 5rem 1rem;
+  background-color: var(--color-zinc-950); /* Matches features section */
+}
+
+.about-content {
+  max-width: 800px; 
+  margin: 2rem auto 0; /* Added top margin to separate from section header */
+  color: var(--color-zinc-300); 
+}
+
+.about-content h3 {
+  font-size: 1.5rem; 
+  font-weight: 600;
+  color: var(--color-white);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-zinc-700); 
+}
+
+.about-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7; 
+}
+
+.about-content ul {
+  list-style: none; 
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.about-content ul li {
+  padding-left: 1.75rem; /* Increased padding for icon */
+  position: relative;
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+}
+
+.about-content ul li::before {
+  content: "✓"; /* Checkmark icon */
+  color: var(--color-purple-500); 
+  position: absolute;
+  left: 0;
+  top: 2px; /* Adjust vertical alignment if needed */
+  font-weight: bold;
+  font-size: 1.1em; /* Slightly larger checkmark */
+}
+
+.about-content .about-cta-title { /* Specific class for the last h3 */
+  text-align: center;
+  border-bottom: none;
+  color: var(--color-purple-400); 
+  font-size: 1.75rem;
+  margin-top: 3rem; /* More space before final CTA */
+}
+.about-content .about-cta-text { /* Specific class for the paragraph after last h3 */
+  text-align: center;
+  font-size: 1.125rem;
+  color: var(--color-zinc-200);
+}
+
+
 /* CTA Section */
 .cta-section {
   padding: 5rem 1rem;
@@ -625,7 +607,6 @@ body {
 .cta-background {
   position: absolute;
   inset: 0;
-  background-image: url('images/placeholder.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.1;

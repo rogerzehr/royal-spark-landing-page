@@ -34,11 +34,12 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('Mobile menu functionality would go here');
     });
     
-    // Video play button (placeholder - expand as needed)
-    const videoPlayButton = document.querySelector('.play-button');
-    
-    videoPlayButton.addEventListener('click', function() {
-        // Add video play functionality here
-        alert('Video play functionality would go here');
-    });
+    // Video play button functionality removed
+    // const videoPlayButton = document.querySelector('.play-button');
+    // if (videoPlayButton) { // Check if element exists before adding listener
+    //     videoPlayButton.addEventListener('click', function() {
+    //         // Add video play functionality here
+    //         alert('Video play functionality would go here');
+    //     });
+    // }
 });
