@@ -282,7 +282,7 @@
             justify-content: center;
         }
         @media (min-width: 640px) { .hero-buttons { flex-direction: row; } }
-        .primary-button {
+        .primary-button, .tool-button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -297,8 +297,13 @@
             transition: all 0.2s;
             text-decoration: none;
         }
-        .primary-button:hover {
+        .primary-button:hover, .tool-button:hover {
             background: linear-gradient(to right, var(--color-purple-700), var(--color-cyan-600));
+        }
+        .tool-button {
+            background: linear-gradient(to right, var(--color-purple-400), var(--color-cyan-400));
+            font-size: 1.05rem;
+            margin: 0.5rem 0;
         }
         .chevron-right {
             width: 1rem;
@@ -453,6 +458,29 @@
         }
         .feature-description {
             color: var(--color-zinc-400);
+        }
+        /* Digital Tools Section */
+        .tools-section {
+            padding: 5rem 0;
+            background-color: var(--color-black);
+        }
+        .tools-container {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .tools-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+        @media (min-width: 640px) {
+            .tools-list {
+                flex-direction: row;
+                justify-content: center;
+            }
         }
         /* Podcast Section */
         .podcast-section {
@@ -654,6 +682,7 @@
                 <nav class="desktop-nav">
                     <a href="#about" class="nav-link">About</a>
                     <a href="#features" class="nav-link">Features</a>
+                    <a href="#tools" class="nav-link">Tools</a>
                     <a href="#podcasts" class="nav-link">Podcasts</a>
                     <a href="#contact" class="nav-link">Contact</a>
                 </nav>
@@ -724,9 +753,9 @@
                         <p class="section-description">Igniting Innovation. Empowering Warfighters.</p>
                     </div>
                     <div class="about-content">
-                        <p>Royal Spark is the dedicated innovation cell serving RAF Mildenhall, acting as the launchpad for next-generation ideas across the 100th Air Refueling Wing, 352nd Special Operations Wing, 95th Reconnaissance Squadron, 488th Intelligence Squadron, and 727th Air Mobility Squadron. We empower Airmen to solve real-world problems through rapid prototyping, emerging technologies, and creative collaboration.</p>
+                        <p>Royal Spark is the dedicated innovation cell serving RAF Mildenhall, acting as the launchpad for next-generation ideas across the 100th Air Refueling Wing, 352nd Special Operations Wing, and mission partners.</p>
                         <h3>Our Mission</h3>
-                        <p>To drive mission-focused innovation that strengthens readiness, enhances lethality, and supports our Airmen through cutting-edge solutions, cross-functional partnerships, and grassroots creativity.</p>
+                        <p>To drive mission-focused innovation that strengthens readiness, enhances lethality, and supports our Airmen through cutting-edge solutions, cross-functional partnerships, and resourceful thinking.</p>
                         <h3>What We Do</h3>
                         <ul>
                             <li>Manage Squadron Innovation Funds (SIF)</li>
@@ -736,7 +765,7 @@
                             <li>Support fielding of new tech, software, and workflows</li>
                         </ul>
                         <h3 class="about-cta-title">Let's Build the Future – Together</h3>
-                        <p class="about-cta-text">Got an idea to improve the mission? Visit our lab, pitch your concept, or just stop by to collaborate. Innovation is a team sport—and everyone has a part to play.</p>
+                        <p class="about-cta-text">Got an idea to improve the mission? Visit our lab, pitch your concept, or just stop by to collaborate. Innovation is a team sport—and everyone has a part to play!</p>
                     </div>
                 </div>
             </section>
@@ -752,7 +781,7 @@
                     <div class="features-grid">
                         <div class="feature-card">
                             <div class="feature-icon-container">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                                 </svg>
                             </div>
@@ -763,7 +792,7 @@
                         </div>
                         <div class="feature-card">
                             <div class="feature-icon-container lightbulb">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <line x1="9" y1="18" x2="15" y2="18"></line>
                                     <line x1="10" y1="22" x2="14" y2="22"></line>
                                     <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"></path>
@@ -776,7 +805,7 @@
                         </div>
                         <div class="feature-card">
                             <div class="feature-icon-container">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
                                     <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
                                     <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
@@ -793,6 +822,25 @@
                     </div>
                 </div>
             </section>
+            <!-- Digital Innovation Tools Section -->
+            <section id="tools" class="tools-section">
+                <div class="section-container tools-container">
+                    <div class="section-header">
+                        <h2 class="section-title">Digital Innovation Tools</h2>
+                        <p class="section-description">
+                            Access the latest digital tools to enhance your workflow and spark creativity. Click a button to launch each resource.
+                        </p>
+                    </div>
+                    <div class="tools-list">
+                        <a href="https://rogerzehr.github.io/royal-spark-landing-page/index.html#about" class="tool-button" target="_blank" rel="noopener noreferrer">
+                            USAF AI Prompt Generator
+                        </a>
+                        <a href="#" class="tool-button" title="Coming soon!" style="pointer-events: none; opacity: 0.6; cursor: not-allowed;">
+                            AI Generated Document Filler (Coming Soon)
+                        </a>
+                    </div>
+                </div>
+            </section>
             <!-- Podcasts Section -->
             <section id="podcasts" class="podcast-section">
                 <div class="section-container">
@@ -803,6 +851,8 @@
                         </p>
                     </div>
                     <div class="podcast-container">
+                        <!-- ... existing podcast cards ... -->
+                        <!-- Podcast Cards Remain Unchanged -->
                         <div class="podcast-card">
                              <div class="podcast-thumbnail-container">
                                 <img src="https://dwtymuzolmglgyejxuve.supabase.co/storage/v1/object/public/podcasts//drone-thumbnail.jpg" alt="sUAS Drone" class="podcast-thumbnail">
@@ -814,11 +864,13 @@
                                 </p>
                                 <div class="podcast-meta">
                                     <span class="podcast-duration">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        </svg>
                                         38:25
                                     </span>
                                     <span class="podcast-date">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        </svg>
                                         May 2, 2025
                                     </span>
                                 </div>
@@ -843,11 +895,13 @@
                                 </p>
                                 <div class="podcast-meta">
                                     <span class="podcast-duration">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        </svg>
                                         18:36
                                     </span>
                                     <span class="podcast-date">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        </svg>
                                         July 25, 2025
                                     </span>
                                 </div>
@@ -872,11 +926,13 @@
                                 </p>
                                 <div class="podcast-meta">
                                     <span class="podcast-duration">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        </svg>
                                         25:10
                                     </span>
                                     <span class="podcast-date">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        </svg>
                                         August 15, 2025
                                     </span>
                                 </div>
@@ -901,11 +957,13 @@
                                 </p>
                                 <div class="podcast-meta">
                                     <span class="podcast-duration">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        </svg>
                                         42:55
                                     </span>
                                     <span class="podcast-date">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        </svg>
                                         September 5, 2025
                                     </span>
                                 </div>
